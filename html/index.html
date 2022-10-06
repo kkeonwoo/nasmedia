@@ -283,7 +283,32 @@
         <!-- //what -->
         <section class="section swiper-slide" id="insight">
           <div class="inner" data-swiper-parallax-scale="0.75">
-            <div class="contents" data-swiper-parallax-scale="1.25"></div>
+            <div class="contents" data-swiper-parallax-scale="1.25">
+              <div class="contentsBox">
+                <div class="titleBox">
+                  <p class="subTitle">Insights for Inspires</p>
+                  <h2 class="title">
+                    디지털 마케팅 트렌드 분석을 통한 <br />
+                    인사이트 제시
+                  </h2>
+                  <div class="btns">
+                    <a href="" class="link">
+                      <i></i>
+                      <span class="txt">나스리포트 바로가기</span>
+                      <span class="material-icons">east</span>
+                    </a>
+                    <a href="" class="link">
+                      <i></i>
+                      <span class="txt">나스리포트 신청하기</span>
+                      <span class="material-icons">east</span>
+                    </a>
+                  </div>
+                </div>
+                <div class="imgBox">
+                  <img src="../images/main/insights.jpg" alt="insights" />
+                </div>
+              </div>
+            </div>
           </div>
         </section>
         <!-- //insight -->
@@ -399,7 +424,7 @@
       $(".link").each(function () {
         // 만약 각각의 길이나 높이 등등이 다를때는 each를 통해
         // 개별 요소로 접근을 해야한다.
-        const end = $(this).innerWidth() - 50;
+        const end = $(this).innerWidth() - 60;
         const linkTL = gsap.timeline({ paused: true });
         const ball = $(this).find("i"); // .link i
         linkTL
@@ -411,7 +436,7 @@
           })
           .to(ball, {
             left: end,
-            width: 50,
+            width: 60,
             ease: "power4.in",
             duration: 0.35,
           });

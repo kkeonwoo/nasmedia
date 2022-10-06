@@ -1,9 +1,9 @@
 .link {
   display: inline-block;
   position: relative;
-  margin-top: 80px;
-  padding: 0 50px;
-  font-size: 20px;
+  margin: 80px 30px 0;
+  padding-right: 50px;
+  font-size: 15px;
   font-weight: 500;
 }
 .link .txt {
@@ -12,22 +12,22 @@
 }
 .link i {
   top: 50%;
-  left: 30px;
+  left: -30px;
   transform: translateY(-50%);
   border-radius: 100px;
   display: block;
   position: absolute;
   content: "";
   display: block;
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   background-color: #f1f1f1;
 }
 .link .material-icons {
   font-size: 16px;
   font-weight: 900;
   position: absolute;
-  right: 15px;
+  right: 10px;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -128,7 +128,8 @@
 #introduce .mainBg iframe {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 #vision .inner {
@@ -196,17 +197,20 @@
   font-weight: 700;
 }
 #what .inner .list .depth01:nth-child(1) .icon span.red {
-  animation: icon01 4s ease infinite;
+  -webkit-animation: icon01 4s ease infinite;
+          animation: icon01 4s ease infinite;
 }
 #what .inner .list .depth01:nth-child(1) .icon span:nth-child(2) {
   right: 0;
-  animation: icon0102 4s ease infinite;
+  -webkit-animation: icon0102 4s ease infinite;
+          animation: icon0102 4s ease infinite;
 }
 #what .inner .list .depth01:nth-child(1) .icon span:nth-child(3) {
   right: 0;
   bottom: auto;
   top: 0;
-  animation: icon0103 4s ease infinite;
+  -webkit-animation: icon0103 4s ease infinite;
+          animation: icon0103 4s ease infinite;
 }
 #what .inner .list .depth01:nth-child(2) .icon {
   width: 50px;
@@ -216,34 +220,40 @@
   height: 30px;
 }
 #what .inner .list .depth01:nth-child(2) .icon span.red {
-  animation: icon02 2s ease infinite;
+  -webkit-animation: icon02 2s ease infinite;
+          animation: icon02 2s ease infinite;
   left: 0;
 }
 #what .inner .list .depth01:nth-child(2) .icon span:nth-child(2) {
-  animation: icon0202 2s ease infinite;
+  -webkit-animation: icon0202 2s ease infinite;
+          animation: icon0202 2s ease infinite;
   right: 0;
 }
 #what .inner .list .depth01:nth-child(3) .icon span.red {
   top: 0;
   transform-origin: 20px 20px;
-  animation: icon03 4s linear infinite;
+  -webkit-animation: icon03 4s linear infinite;
+          animation: icon03 4s linear infinite;
 }
 #what .inner .list .depth01:nth-child(3) .icon span:nth-child(2) {
   width: 40px;
   height: 40px;
 }
 #what .inner .list .depth01:nth-child(4) .icon span.red {
-  animation: icon01 4s ease infinite;
+  -webkit-animation: icon01 4s ease infinite;
+          animation: icon01 4s ease infinite;
 }
 #what .inner .list .depth01:nth-child(4) .icon span:nth-child(2) {
   right: 0;
-  animation: icon0102 4s ease infinite;
+  -webkit-animation: icon0102 4s ease infinite;
+          animation: icon0102 4s ease infinite;
 }
 #what .inner .list .depth01:nth-child(4) .icon span:nth-child(3) {
   right: 0;
   bottom: auto;
   top: 0;
-  animation: icon0103 4s ease infinite;
+  -webkit-animation: icon0103 4s ease infinite;
+          animation: icon0103 4s ease infinite;
 }
 #what .inner .list .depth01 .icon {
   position: relative;
@@ -274,7 +284,8 @@
   width: 100%;
 }
 #what .inner .list .depth01 .depth02 li:hover a::after {
-  animation: lineAni 1s ease 0s forwards;
+  -webkit-animation: lineAni 1s ease 0s forwards;
+          animation: lineAni 1s ease 0s forwards;
 }
 #what .inner .list .depth01 .depth02 li a {
   position: relative;
@@ -293,6 +304,29 @@
 
 #insight .inner {
   background-color: #fff;
+}
+#insight .inner .contentsBox {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+#insight .inner .contentsBox .titleBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#insight .inner .contentsBox .titleBox .subTitle {
+  font-weight: 700;
+  font-size: 18px;
+}
+#insight .inner .contentsBox .titleBox .title {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-top: 20px;
+}
+#insight .inner .contentsBox .btns .link {
+  margin-top: 50px;
 }
 
 #together .inner {
@@ -361,6 +395,21 @@
   background-color: #f52f23;
 }
 
+@-webkit-keyframes lineAni {
+  0% {
+    width: 0%;
+    height: 1px;
+  }
+  50% {
+    width: 100%;
+    height: 1px;
+  }
+  100% {
+    width: 100%;
+    height: 3px;
+  }
+}
+
 @keyframes lineAni {
   0% {
     width: 0%;
@@ -375,6 +424,14 @@
     height: 3px;
   }
 }
+@-webkit-keyframes bgAni01 {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+  }
+}
 @keyframes bgAni01 {
   0% {
     left: 0;
@@ -383,12 +440,42 @@
     left: 100%;
   }
 }
+@-webkit-keyframes bgAni02 {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: 0;
+  }
+}
 @keyframes bgAni02 {
   0% {
     left: 100%;
   }
   100% {
     left: 0;
+  }
+}
+@-webkit-keyframes icon01 {
+  0% {
+    top: 25px;
+    left: 0;
+  }
+  25% {
+    top: 25px;
+    left: 25px;
+  }
+  50% {
+    top: 0px;
+    left: 25px;
+  }
+  75% {
+    top: 25px;
+    left: 25px;
+  }
+  100% {
+    left: 0;
+    top: 25px;
   }
 }
 @keyframes icon01 {
@@ -413,6 +500,23 @@
     top: 25px;
   }
 }
+@-webkit-keyframes icon0102 {
+  0% {
+    left: 25px;
+  }
+  25% {
+    left: 0px;
+  }
+  50% {
+    left: 0px;
+  }
+  75% {
+    left: 0px;
+  }
+  100% {
+    left: 25px;
+  }
+}
 @keyframes icon0102 {
   0% {
     left: 25px;
@@ -428,6 +532,33 @@
   }
   100% {
     left: 25px;
+  }
+}
+@-webkit-keyframes icon0103 {
+  0% {
+    right: 0;
+    top: 0;
+    bottom: auto;
+  }
+  25% {
+    right: 0;
+    top: 0;
+    bottom: auto;
+  }
+  50% {
+    right: 0;
+    top: 25px;
+    bottom: auto;
+  }
+  75% {
+    right: 0;
+    top: 0;
+    bottom: auto;
+  }
+  100% {
+    right: 0;
+    top: 0;
+    bottom: auto;
   }
 }
 @keyframes icon0103 {
@@ -457,6 +588,17 @@
     bottom: auto;
   }
 }
+@-webkit-keyframes icon02 {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 20px;
+  }
+  100% {
+    left: 0;
+  }
+}
 @keyframes icon02 {
   0% {
     left: 0;
@@ -468,6 +610,17 @@
     left: 0;
   }
 }
+@-webkit-keyframes icon0202 {
+  0% {
+    right: 0;
+  }
+  50% {
+    right: 20px;
+  }
+  100% {
+    right: 0;
+  }
+}
 @keyframes icon0202 {
   0% {
     right: 0;
@@ -477,6 +630,14 @@
   }
   100% {
     right: 0;
+  }
+}
+@-webkit-keyframes icon03 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
 @keyframes icon03 {
