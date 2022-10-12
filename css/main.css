@@ -44,9 +44,7 @@
   height: 120px;
   border-radius: 100%;
   position: absolute;
-  mix-blend-mode: difference;
   z-index: 2;
-  filter: invert(100);
 }
 .ballBox .ball .ballBg {
   width: 100%;
@@ -330,6 +328,45 @@
 }
 
 #together .inner {
+  background-color: #f52f23;
+  color: #fff;
+  position: relative;
+}
+#together .inner .contents .contentsBox .titleBox {
+  margin-bottom: 80px;
+}
+#together .inner .contents .contentsBox .list {
+  display: flex;
+}
+#together .inner .contents .contentsBox .list li {
+  flex-basis: 50%;
+}
+#together .inner .contents .contentsBox .list li span {
+  font-weight: 600;
+  font-size: 18px;
+}
+#together .inner .contents .contentsBox .list li .subTitle {
+  font-size: 28px;
+  line-height: 1.5;
+  display: block;
+  margin-top: 20px;
+}
+#together .inner .contents .contentsBox .list li .link i {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+#together .inner .contents .contentsBox .list li .link .txt {
+  font-size: 16px;
+}
+#together .inner .ballBox .ball {
+  background-color: #fff;
+}
+#together .inner .ballBox .ball .ballBg {
+  background-color: #fff;
+}
+#together .inner .ballBox .ball.line {
+  border-color: #fff;
+}
+#together .inner .ballBox .ball.line::before {
   background-color: #f52f23;
 }
 
