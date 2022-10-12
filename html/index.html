@@ -637,6 +637,13 @@
       //     },
       //   });
       // });
+
+      $("#f-gnb .depth01").on("mouseenter", function () {
+        $(this).addClass("on").siblings().removeClass("on");
+      });
+      $("#f-gnb .depth01").on("mouseleave", function () {
+        $(this).removeClass("on");
+      });
     </script>
   </body>
 </html>
