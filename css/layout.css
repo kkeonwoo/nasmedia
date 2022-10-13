@@ -282,3 +282,65 @@ a {
   opacity: 1;
   pointer-events: auto;
 }
+
+#f-gnb .list > li.on .depth02 {
+  display: block;
+}
+#f-gnb .list > li .depth02 {
+  display: none;
+}
+
+#footer .inner {
+  background-color: #000;
+  color: #fff;
+}
+#footer .inner .contents {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+#footer .inner .f-bottom {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+#footer .inner .f-bottom .utilMenu {
+  display: flex;
+  margin: 10px 0;
+}
+#footer .inner .f-bottom .utilMenu > li {
+  margin: 0 10px;
+  color: #666;
+  transition: color 0.25s ease-in-out;
+}
+#footer .inner .f-bottom .utilMenu > li.on {
+  color: #ccc;
+}
+#footer .inner .f-bottom .utilMenu > li:hover {
+  color: #fff;
+}
+#footer .inner .f-bottom .info {
+  margin: 10px 0;
+}
+#footer .inner .f-bottom .info span {
+  padding: 10px;
+}
+#footer .inner .f-bottom .info span.name {
+  position: relative;
+}
+#footer .inner .f-bottom .info span.name:before {
+  display: block;
+  position: absolute;
+  content: "";
+  display: block;
+  width: 1px;
+  height: 10px;
+  background-color: #fff;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+}
+#footer .inner .f-bottom .copyright {
+  margin: 10px 0;
+}

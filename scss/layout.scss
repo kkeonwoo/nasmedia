@@ -318,3 +318,66 @@ a {
     pointer-events: auto;
   }
 }
+
+#f-gnb {
+  .list {
+    > li {
+      &.on {
+        .depth02 {
+          display: block;
+        }
+      }
+      .depth02 {
+        display: none;
+      }
+    }
+  }
+}
+
+#footer .inner {
+  background-color: #000;
+  color: #fff;
+  .contents {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+  .f-bottom {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    .utilMenu {
+      display: flex;
+      margin: 10px 0;
+      > li {
+        margin: 0 10px;
+        color: #666;
+        transition: color 0.25s ease-in-out;
+        &.on {
+          color: #ccc;
+        }
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+    .info {
+      margin: 10px 0;
+      span {
+        padding: 10px;
+        &.name {
+          position: relative;
+          &:before {
+            @include pseudo;
+            @include box(1px, 10px, #fff);
+            @include absCenter(false, true);
+            right: 0;
+          }
+        }
+      }
+    }
+    .copyright {
+      margin: 10px 0;
+    }
+  }
+}

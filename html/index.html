@@ -366,7 +366,7 @@
             <div class="contents" data-swiper-parallax-scale="1.25">
               <nav id="f-gnb" class="nav">
                 <h3 class="blind">f-gnb</h3>
-                <ul>
+                <ul class="list">
                   <li>
                     <a href="" class="depth01">회사소개</a>
                     <ul class="depth02">
@@ -436,23 +436,23 @@
                   <button><a href="" class="btn">회사소개서 다운로드</a></button>
                 </div>
               </div>
-              <div class="f-bottom">
-                <ul class="utilMenu">
-                  <li><a href="">개인정보처리방침</a></li>
-                  <li><a href="">영상정보처리방침</a></li>
-                  <li><a href="">이메일무단수집거부</a></li>
-                  <li><a href="">광고문의</a></li>
-                  <li><a href="">윤리위반신고</a></li>
-                </ul>
-                <div class="info">
-                  <span class="name">대표자 : 박평권</span>
-                  <span class="name">사업자등록번호 : 220-81-80363</span>
-                </div>
-                <p class="copyright">Copyright ⓒ NASMEDIA Co., LTD. All Rights Reserved.</p>
-                <button>
-                  <span>Fmaily Site</span>
-                </button>
+            </div>
+            <div class="f-bottom">
+              <ul class="utilMenu">
+                <li class="on"><a href="">개인정보처리방침</a></li>
+                <li><a href="">영상정보처리방침</a></li>
+                <li><a href="">이메일무단수집거부</a></li>
+                <li><a href="">광고문의</a></li>
+                <li><a href="">윤리위반신고</a></li>
+              </ul>
+              <div class="info">
+                <span class="name">대표자 : 박평권</span>
+                <span>사업자등록번호 : 220-81-80363</span>
               </div>
+              <p class="copyright">Copyright ⓒ NASMEDIA Co., LTD. All Rights Reserved.</p>
+              <button class="familySite">
+                <span>Family Site</span>
+              </button>
             </div>
           </div>
         </section>
@@ -638,11 +638,15 @@
       //   });
       // });
 
-      $("#f-gnb .depth01").on("mouseenter", function () {
+      $("#f-gnb .list > li").on("mouseenter", function () {
         $(this).addClass("on").siblings().removeClass("on");
       });
-      $("#f-gnb .depth01").on("mouseleave", function () {
+      $("#f-gnb .list > li").on("mouseleave", function () {
         $(this).removeClass("on");
+      });
+      $("#footer .utilMenu > li").on("click", function (e) {
+        e.preventDefault();
+        $(this).addClass("on").siblings().removeClass("on");
       });
     </script>
   </body>
