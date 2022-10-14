@@ -139,6 +139,22 @@ a {
 #header .btnAll span:nth-child(2) {
   top: 57px;
 }
+#header .fTopBtn {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  right: 50px;
+  transform: translate(-50%, -50%);
+}
+#header .fTopBtn .material-icons {
+  cursor: pointer;
+  font-size: 40px;
+  color: #fff;
+  transition: color 0.25s ease-in-out;
+}
+#header .fTopBtn .material-icons:hover {
+  color: #f52f23;
+}
 
 .black #header #logo a img.white {
   opacity: 1;
@@ -148,9 +164,18 @@ a {
 }
 .black #header #gnb {
   color: #fff;
+  opacity: 1;
+  display: block;
+}
+.black #header .btnAll {
+  opacity: 1;
+  display: block;
 }
 .black #header .btnAll span {
   background-color: #fff;
+}
+.black #header .fTopBtn {
+  opacity: 0;
 }
 .black #main .pagination .swiper-pagination-bullet {
   background-color: #fff;
@@ -174,7 +199,20 @@ a {
   opacity: 0;
 }
 .red #header #gnb {
+  opacity: 1;
+  display: block;
   color: #fff;
+}
+.red #header .btnAll {
+  opacity: 1;
+  display: block;
+}
+.red #header .btnAll span {
+  background-color: #fff;
+}
+.red #header .fTopBtn {
+  opacity: 0;
+  display: none;
 }
 .red #main .pagination .swiper-pagination-bullet {
   background-color: #000;
@@ -189,6 +227,23 @@ a {
 .red #main .pagination .swiper-pagination-bullet-active .tooltip {
   color: #000;
   background-color: #fff;
+}
+
+.off #header #logo a img.white {
+  opacity: 1;
+}
+.off #header #logo a img.color {
+  opacity: 0;
+}
+.off #header .fTopBtn {
+  opacity: 1;
+}
+.off #gnb {
+  opacity: 0;
+}
+.off .btnAll {
+  display: none;
+  opacity: 0;
 }
 
 #allMenu {
@@ -289,14 +344,31 @@ a {
 #f-gnb .list > li:nth-child(1) {
   margin-top: 0;
 }
-#f-gnb .list > li.on .depth02 {
-  display: block;
-}
 #f-gnb .list > li .depth01 {
   font-size: 36px;
 }
 #f-gnb .list > li .depth02 {
   display: none;
+  opacity: 0;
+  position: absolute;
+  left: 20%;
+  top: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+#f-gnb .list > li .depth02 > li {
+  margin: 20px 0;
+}
+#f-gnb .f-ball {
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  background-color: #f52f23;
+  position: fixed;
+  top: 0;
+  opacity: 0;
+  left: -50px;
 }
 
 #footer .inner {
@@ -305,7 +377,7 @@ a {
   position: relative;
 }
 #footer .inner .contents {
-  width: 1200px;
+  width: 1300px;
   display: flex;
   position: relative;
   border-bottom: 1px solid #333;
@@ -324,19 +396,39 @@ a {
   font-weight: 700;
 }
 #footer .inner .contents .addressBox p {
-  margin: 30px 0;
+  margin: 25px 0;
   color: #999;
+}
+#footer .inner .contents .addressBox .btns .btn {
+  font-size: 16px;
+  font-weight: 700;
+  padding: 20px 60px 20px 30px;
+  background-color: #f52f23;
+  position: relative;
+  letter-spacing: -1px;
+}
+#footer .inner .contents .addressBox .btns .btn::before {
+  display: block;
+  position: absolute;
+  content: "";
+  font-family: "Material Icons";
+  content: "file_download";
+  display: inline-block;
+  margin-left: 10px;
+  right: 30px;
+  top: 50%;
+  transform: translate(50%, -50%);
 }
 #footer .inner .contents .f-bottom {
   width: 100%;
   position: absolute;
-  bottom: -180px;
+  bottom: -150px;
   font-size: 14px;
   color: #999;
 }
 #footer .inner .contents .f-bottom .utilMenu {
   display: flex;
-  margin: 30px 0;
+  margin-bottom: 30px;
 }
 #footer .inner .contents .f-bottom .utilMenu > li {
   margin-right: 20px;
@@ -374,4 +466,34 @@ a {
 }
 #footer .inner .contents .f-bottom .copyright {
   margin: 10px 0;
+}
+#footer .inner .contents .f-bottom .familySite {
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+}
+#footer .inner .contents .f-bottom .familySite:hover span {
+  color: #fff;
+  border-color: #fff;
+}
+#footer .inner .contents .f-bottom .familySite span {
+  transition: all 0.25s ease-in-out;
+  display: block;
+  border: 1px solid #999;
+  padding: 20px 180px 20px 20px;
+}
+#footer .inner .contents .f-bottom .familySite span::before {
+  display: block;
+  position: absolute;
+  content: "";
+  font-family: "Material Icons";
+  content: "expand_more";
+  display: inline-block;
+  margin-left: 0;
+  right: 20px;
+  top: 50%;
+  font-size: 20px;
+  font-weight: 900;
+  transform: translateY(-50%);
 }
