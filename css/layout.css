@@ -283,8 +283,17 @@ a {
   pointer-events: auto;
 }
 
+#f-gnb .list > li {
+  margin: 20px 0;
+}
+#f-gnb .list > li:nth-child(1) {
+  margin-top: 0;
+}
 #f-gnb .list > li.on .depth02 {
   display: block;
+}
+#f-gnb .list > li .depth01 {
+  font-size: 36px;
 }
 #f-gnb .list > li .depth02 {
   display: none;
@@ -293,42 +302,64 @@ a {
 #footer .inner {
   background-color: #000;
   color: #fff;
-}
-#footer .inner .contents {
-  display: flex;
-  justify-content: space-between;
   position: relative;
 }
-#footer .inner .f-bottom {
+#footer .inner .contents {
+  width: 1200px;
+  display: flex;
+  position: relative;
+  border-bottom: 1px solid #333;
+  padding-bottom: 150px;
+}
+#footer .inner .contents .nav,
+#footer .inner .contents .addressBox {
+  flex-basis: 50%;
+}
+#footer .inner .contents .addressBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#footer .inner .contents .addressBox span {
+  font-weight: 700;
+}
+#footer .inner .contents .addressBox p {
+  margin: 30px 0;
+  color: #999;
+}
+#footer .inner .contents .f-bottom {
   width: 100%;
   position: absolute;
-  bottom: 0;
+  bottom: -180px;
+  font-size: 14px;
+  color: #999;
 }
-#footer .inner .f-bottom .utilMenu {
+#footer .inner .contents .f-bottom .utilMenu {
   display: flex;
-  margin: 10px 0;
+  margin: 30px 0;
 }
-#footer .inner .f-bottom .utilMenu > li {
-  margin: 0 10px;
+#footer .inner .contents .f-bottom .utilMenu > li {
+  margin-right: 20px;
   color: #666;
   transition: color 0.25s ease-in-out;
 }
-#footer .inner .f-bottom .utilMenu > li.on {
+#footer .inner .contents .f-bottom .utilMenu > li.on {
   color: #ccc;
 }
-#footer .inner .f-bottom .utilMenu > li:hover {
+#footer .inner .contents .f-bottom .utilMenu > li:hover {
   color: #fff;
 }
-#footer .inner .f-bottom .info {
+#footer .inner .contents .f-bottom .info {
   margin: 10px 0;
 }
-#footer .inner .f-bottom .info span {
+#footer .inner .contents .f-bottom .info span {
   padding: 10px;
 }
-#footer .inner .f-bottom .info span.name {
+#footer .inner .contents .f-bottom .info span.name {
   position: relative;
+  padding-left: 0;
 }
-#footer .inner .f-bottom .info span.name:before {
+#footer .inner .contents .f-bottom .info span.name:before {
   display: block;
   position: absolute;
   content: "";
@@ -341,6 +372,6 @@ a {
   transform: translateY(-50%);
   right: 0;
 }
-#footer .inner .f-bottom .copyright {
+#footer .inner .contents .f-bottom .copyright {
   margin: 10px 0;
 }

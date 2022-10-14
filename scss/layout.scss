@@ -322,10 +322,17 @@ a {
 #f-gnb {
   .list {
     > li {
+      margin: 20px 0;
+      &:nth-child(1) {
+        margin-top: 0;
+      }
       &.on {
         .depth02 {
           display: block;
         }
+      }
+      .depth01 {
+        font-size: 36px;
       }
       .depth02 {
         display: none;
@@ -337,47 +344,69 @@ a {
 #footer .inner {
   background-color: #000;
   color: #fff;
+  position: relative;
   .contents {
+    width: 1200px;
     display: flex;
-    justify-content: space-between;
     position: relative;
-  }
-  .f-bottom {
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    .utilMenu {
+    border-bottom: 1px solid #333;
+    padding-bottom: 150px;
+    .nav,
+    .addressBox {
+      flex-basis: 50%;
+    }
+    .addressBox {
       display: flex;
-      margin: 10px 0;
-      > li {
-        margin: 0 10px;
-        color: #666;
-        transition: color 0.25s ease-in-out;
-        &.on {
-          color: #ccc;
-        }
-        &:hover {
-          color: #fff;
-        }
+      flex-direction: column;
+      justify-content: space-between;
+      span {
+        font-weight: 700;
+      }
+      p {
+        margin: 30px 0;
+        color: #999;
       }
     }
-    .info {
-      margin: 10px 0;
-      span {
-        padding: 10px;
-        &.name {
-          position: relative;
-          &:before {
-            @include pseudo;
-            @include box(1px, 10px, #fff);
-            @include absCenter(false, true);
-            right: 0;
+    .f-bottom {
+      width: 100%;
+      position: absolute;
+      bottom: -180px;
+      font-size: 14px;
+      color: #999;
+      .utilMenu {
+        display: flex;
+        margin: 30px 0;
+        > li {
+          margin-right: 20px;
+          color: #666;
+          transition: color 0.25s ease-in-out;
+          &.on {
+            color: #ccc;
+          }
+          &:hover {
+            color: #fff;
           }
         }
       }
-    }
-    .copyright {
-      margin: 10px 0;
+      .info {
+        margin: 10px 0;
+        span {
+          padding: 10px;
+          &.name {
+            position: relative;
+            padding-left: 0;
+            &:before {
+              @include pseudo;
+              @include box(1px, 10px, #fff);
+              @include absCenter(false, true);
+              right: 0;
+            }
+          }
+        }
+      }
+      .copyright {
+        margin: 10px 0;
+      }
     }
   }
 }
